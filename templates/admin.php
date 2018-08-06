@@ -15,7 +15,7 @@
     <h4>Домашняя работа</h4>
     <h4>Редактирование новостей</h4>
         <table border="1">
-            <td>id</td><td>Заголовок</td><td>Статья</td><td>Автор</td>
+            <td>id</td><td>Заголовок</td><td>Статья</td>
             <?php foreach ($data as $article ) { ?>
                 <tr>
                     <form action="/admin/update.php" method="post">
@@ -23,8 +23,6 @@
                         <td><input type="text" name="header" value="<?php echo $article->getHeader(); ?>" ></td>
 
                         <td><textarea name="text" ><?php echo $article->getText(); ?></textarea></td>
-
-                        <td><input type="text" name="author" value="<?php echo $article->getAuthor(); ?>"></td>
 
                         <td><button type="submit" name="update" value="<?php echo $article->getId(); ?>">Изменить</button></td>
                     </form>
@@ -40,7 +38,6 @@
     <form action="/admin/add.php" method="post">
         <h4>Добавление новой записи</h4>
         Заголовок статьи: <input type="text" name="header" >
-        Автор статьи: <input type="text" name="author" >
         <p>Текст статьи</p>
         <textarea cols="60" rows="10" name="text"></textarea>
         <br>
