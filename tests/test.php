@@ -5,7 +5,7 @@ require __DIR__ . '/../autoload.php';
 
 $db = new \App\Db();
 
-$test = $db->execute( 'UPDATE news SET author = :a1 WHERE author = :a2 ', [':a1' => 'Мария' , ':a2' => 'Анна'] ); //3. Проверяем работоспособность
+$test = $db->execute( 'UPDATE news SET header = :h1 WHERE header = :h2 ', [':h1' => 'Заголовок 122' , ':h2' => 'Заголовок 1'] ); //3. Проверяем работоспособность
 var_dump($test);
 
 $data = \App\Models\Article::findById(1); //тестируем поиск по id
