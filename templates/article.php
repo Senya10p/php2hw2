@@ -11,8 +11,8 @@
     <h4>Домашняя работа</h4>
     <h2>Новости</h2>
 
-    <h3><?php echo $article->getHeader(); ?></h3>
-    <article><?php echo $article->getText(); ?></article>
+    <h3><?php echo $article->header; ?></h3>
+    <article><?php echo $article->text; ?></article>
     <br><br>
     <a href="/index.php">Все новости</a>
 </body>
