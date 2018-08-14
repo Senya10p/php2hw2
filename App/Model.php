@@ -4,14 +4,9 @@ namespace App;
 
 abstract class Model
 {
-    protected $id; //свойство id, полагая, что во всех таблицах есть id
+    public $id; //свойство id, полагая, что во всех таблицах есть id
 
     protected static $table = null; //статическое св-во
-
-    public function getId()
-    {
-        return $this->id;
-    }
 
     public static function findAll()
     {

@@ -19,16 +19,16 @@
             <?php foreach ($data as $article ) { ?>
                 <tr>
                     <form action="/admin/update.php" method="post">
-                        <td> <?php echo $article->getID(); ?></td>
+                        <td> <?php echo $article->id; ?></td>
                         <td><input type="text" name="header" value="<?php echo $article->header; ?>" ></td>
 
                         <td><textarea name="text" ><?php echo $article->text; ?></textarea></td>
 
-                        <td><button type="submit" name="update" value="<?php echo $article->getId(); ?>">Изменить</button></td>
+                        <td><button type="submit" name="update" value="<?php echo $article->id; ?>">Изменить</button></td>
                     </form>
                     <td>
                         <form action="/admin/delete.php" method="post">
-                            <button type="submit" name="del" value="<?php echo $article->getId(); ?>">Удалить</button>
+                            <button type="submit" name="del" value="<?php echo $article->id; ?>">Удалить</button>
                         </form>
                     </td>
                 </tr>
